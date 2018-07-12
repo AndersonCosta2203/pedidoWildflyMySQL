@@ -33,18 +33,17 @@
             <version>5.1.46</version>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.3.0.Final</version>
-            <exclusions>
+           <!-- <exclusions>
                 <exclusion>
                     <groupId>dom4j</groupId>
                     <artifactId>dom4j</artifactId>
                 </exclusion>
-            </exclusions>
+            </exclusions> -->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
@@ -68,6 +67,28 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.19.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
