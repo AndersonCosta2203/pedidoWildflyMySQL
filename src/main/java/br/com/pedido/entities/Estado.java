@@ -1,17 +1,26 @@
-package br.com.pedido.domain;
+package br.com.pedido.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "estado")
 public class Estado implements Serializable {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codigo;
 
@@ -29,7 +38,6 @@ public class Estado implements Serializable {
     private List<Cidade> cidades = new ArrayList<>();
 
     public Estado(String nome) {
-        this.codigo = codigo;
         this.nome = nome;
     }
 
@@ -53,9 +61,9 @@ public class Estado implements Serializable {
 
     @Override
     public String toString() {
-        return "Estado{" +
-                "codigo=" + codigo +
-                ", nome='" + nome + '\'' +
+        return "Estado {" +
+                "\ncodigo=" + codigo +
+                ",\nnome='" + nome + '\'' +
                 '}';
     }
 }

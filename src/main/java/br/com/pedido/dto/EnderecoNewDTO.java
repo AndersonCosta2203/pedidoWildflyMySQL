@@ -1,8 +1,8 @@
 package br.com.pedido.dto;
 
-import br.com.pedido.domain.Cliente;
-
 import java.io.Serializable;
+
+import br.com.pedido.entities.Cliente;
 
 public class EnderecoNewDTO implements Serializable {
 

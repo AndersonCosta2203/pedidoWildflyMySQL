@@ -1,4 +1,4 @@
-package br.com.pedido.domain;
+package br.com.pedido.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -7,7 +7,9 @@ import java.io.Serializable;
 @Table(name = "endereco")
 public class Endereco implements Serializable {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -111,4 +113,13 @@ public class Endereco implements Serializable {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+
+	@Override
+	public String toString() {
+		return "Endereco [id=" + id + ",\nlogradouro=" + logradouro + ",\nnumero=" + numero + ",\ncomplemento="
+				+ complemento + ",\nbairro=" + bairro + ",\ncep=" + cep + ",\ncidade=" + cidade + ",\ncliente=" + cliente
+				+ "]";
+	}
+    
+    
 }

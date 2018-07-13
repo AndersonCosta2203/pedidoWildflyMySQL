@@ -1,4 +1,4 @@
-package br.com.pedido.domain;
+package br.com.pedido.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -7,7 +7,9 @@ import java.io.Serializable;
 @Table(name = "cidade")
 public class Cidade implements Serializable {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codigo;
 
@@ -55,9 +57,9 @@ public class Cidade implements Serializable {
     @Override
     public String toString() {
         return "Cidade{" +
-                "codigo=" + codigo +
-                ", nome='" + nome + '\'' +
-                ", estado=" + estado +
+                "\ncodigo=" + codigo +
+                ",\nnome='" + nome + '\'' +
+                ",\nestado=" + estado +
                 '}';
     }
 }

@@ -11,10 +11,10 @@
         <!-- INFORMANDO O DATASOURCE -->
         <jta-data-source>java:jboss/datasources/pedido-ds</jta-data-source>
 
-        <class>br.com.pedido.domain.Estado</class>
-        <class>br.com.pedido.domain.Cidade</class>
-        <class>br.com.pedido.domain.Cliente</class>
-        <class>br.com.pedido.domain.Endereco</class>
+        <class>br.com.pedido.entities.Estado</class>
+        <class>br.com.pedido.entities.Cidade</class>
+        <class>br.com.pedido.entities.Cliente</class>
+        <class>br.com.pedido.entities.Endereco</class>
 
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update" />
